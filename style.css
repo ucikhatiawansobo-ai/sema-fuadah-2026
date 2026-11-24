@@ -1,0 +1,1489 @@
+
+/* ==============================
+   DASAR WEBSITE
+================================= */
+
+:root {
+    --navy: #193b5a;
+    --blue: #477da5;
+    --light-blue: #e9f3fa;
+    --pale-blue: #f4f8fc;
+    --white: #ffffff;
+    --text: #33495c;
+    --muted: #788b9b;
+    --gold: #c4a878;
+    --border: #e4edf3;
+    --shadow: 0 12px 35px rgba(29, 66, 95, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--navy);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.25;
+    margin-bottom: 13px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ==============================
+   HALAMAN PEMBUKA
+================================= */
+
+.intro-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 20%, #d7eaf8, transparent 40%),
+        radial-gradient(circle at 85% 80%, #c5dff0, transparent 40%),
+        #f2f7fb;
+    transition: opacity .7s ease, visibility .7s ease;
+}
+
+.intro-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-content {
+    max-width: 650px;
+    animation: introAppear 1s ease;
+}
+
+.intro-symbol {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 24px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #9ebbd1;
+    border-radius: 50%;
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.intro-small {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.intro-content h1 {
+    font-family: "Playfair Display", serif;
+    color: var(--navy);
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    max-width: 470px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.enter-button {
+    margin-top: 32px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: var(--navy);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.enter-button:hover {
+    background: var(--blue);
+    transform: translateY(-3px);
+}
+
+.enter-button span {
+    margin-left: 12px;
+}
+
+.intro-note {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 24px;
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   HEADER DAN NAVIGASI
+================================= */
+
+.header {
+    height: 82px;
+    background: rgba(255, 255, 255, .96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+.brand-text strong {
+    color: var(--navy);
+    font-size: 12px;
+    letter-spacing: .8px;
+}
+
+.brand-text span {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.navigation a {
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.navigation a:hover {
+    color: var(--blue);
+}
+
+.navigation .nav-highlight {
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: var(--light-blue);
+    color: var(--navy);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--navy);
+    font-size: 26px;
+}
+
+/* ==============================
+   HERO
+================================= */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(14, 40, 63, .88), rgba(23, 61, 88, .53)),
+        url("assets/banner.jpg") center/cover no-repeat,
+        #254f70;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0 130px;
+    color: white;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #dceaf4;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 23px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 69px);
+    line-height: 1.17;
+    max-width: 750px;
+    margin-bottom: 22px;
+}
+
+.hero-content p {
+    max-width: 530px;
+    color: #e1edf5;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 35px;
+}
+
+.btn {
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: var(--light-blue);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    color: white;
+    border: 1px solid rgba(255,255,255,.65);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 27px;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #e4edf4;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.hero-line {
+    width: 30px;
+    height: 1px;
+    background: #a9c3d7;
+}
+
+/* ==============================
+   PROFIL
+================================= */
+
+.profile-section {
+    background: white;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.profile-image {
+    position: relative;
+    min-height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--light-blue);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    padding: 15px 20px;
+    background: rgba(20, 51, 76, .88);
+    color: white;
+    border-radius: 7px;
+}
+
+.image-caption span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #b8d0e2;
+}
+
+.image-caption strong {
+    font-size: 14px;
+}
+
+.profile-text h3 {
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.profile-text p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.profile-text blockquote {
+    border-left: 3px solid var(--gold);
+    padding: 12px 20px;
+    margin-top: 25px;
+    color: var(--navy);
+    background: var(--pale-blue);
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* ==============================
+   NILAI ORGANISASI
+================================= */
+
+.values-section {
+    padding: 65px 0;
+    background: var(--pale-blue);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.value-item {
+    padding: 15px;
+}
+
+.value-item span {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.value-item h3 {
+    margin: 10px 0;
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+}
+
+.value-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==============================
+   BERITA
+================================= */
+
+.news-section {
+    background: white;
+}
+
+.news-tools {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.news-tools input,
+.news-tools select {
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    outline: none;
+    color: var(--text);
+    background: white;
+    font-size: 12px;
+}
+
+.news-tools input {
+    flex: 1;
+}
+
+.news-tools input:focus,
+.news-tools select:focus {
+    border-color: var(--blue);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    transition: .3s;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: var(--light-blue);
+}
+
+.news-content {
+    padding: 23px;
+}
+
+.news-category {
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.news-content h3 {
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    line-height: 1.35;
+    margin: 10px 0;
+}
+
+.news-content p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.read-more {
+    margin-top: 18px;
+    border: none;
+    background: none;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.read-more:hover {
+    color: var(--navy);
+}
+
+.empty-message {
+    display: none;
+    padding: 30px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* ==============================
+   PENGUMUMAN
+================================= */
+
+.announcement-section {
+    background: var(--pale-blue);
+}
+
+.announcement-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.announcement-item {
+    display: flex;
+    gap: 25px;
+    padding: 27px;
+    margin-bottom: 15px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    transition: .3s;
+}
+
+.announcement-item:hover {
+    box-shadow: var(--shadow);
+}
+
+.announcement-date {
+    min-width: 60px;
+    height: 65px;
+    background: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--navy);
+}
+
+.announcement-date span {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.announcement-date small {
+    font-size: 9px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.announcement-tag {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.announcement-detail h3 {
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    margin: 4px 0;
+}
+
+.announcement-detail p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ==============================
+   STRUKTUR ORGANISASI
+================================= */
+
+.organization-section {
+    background: white;
+}
+
+.org-department {
+    margin-bottom: 55px;
+}
+
+.department-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.department-heading span {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--light-blue);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.department-heading h3 {
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+}
+
+.org-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    margin: auto;
+}
+
+.org-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    transition: .3s;
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.org-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 30%;
+    background: var(--light-blue);
+}
+
+.org-card div {
+    padding: 18px;
+    text-align: center;
+}
+
+.org-card span {
+    color: var(--blue);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.org-card h4 {
+    color: var(--navy);
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 7px;
+}
+
+.org-total {
+    margin: 60px auto 0;
+    padding: 30px;
+    background: var(--pale-blue);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.org-total strong {
+    display: block;
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+}
+
+.org-total span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ==============================
+   PROGRAM KERJA
+================================= */
+
+.program-section {
+    background: var(--pale-blue);
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.program-card {
+    position: relative;
+    padding: 38px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: white;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.program-number {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #eaf1f6;
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.program-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: var(--light-blue);
+    border-radius: 12px;
+    color: var(--navy);
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.program-card > span {
+    font-size: 10px;
+    color: var(--blue);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.program-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: var(--navy);
+    margin: 7px 0 15px;
+}
+
+.program-card > p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.program-focus {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.program-focus strong {
+    color: var(--navy);
+    font-size: 12px;
+}
+
+.program-focus ul {
+    padding-left: 18px;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.program-focus li {
+    margin-bottom: 6px;
+}
+
+.featured-program {
+    background: #edf5fb;
+}
+
+/* ==============================
+   BERITA ACARA DAN ARSIP
+================================= */
+
+.minutes-section {
+    background: white;
+}
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.document-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.document-icon {
+    min-width: 48px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: var(--navy);
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.document-card h3 {
+    font-size: 14px;
+    color: var(--navy);
+}
+
+.document-card p {
+    color: var(--muted);
+    font-size: 11px;
+    margin: 4px 0;
+}
+
+.document-card a {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.archive-section {
+    background: var(--pale-blue);
+}
+
+.archive-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.archive-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.archive-type {
+    color: var(--blue);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.archive-info h3 {
+    color: var(--navy);
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.archive-item a {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.archive-item a:hover {
+    color: var(--navy);
+}
+
+/* ==============================
+   GALERI DAN VIDEO
+================================= */
+
+.gallery-section {
+    background: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 230px;
+    border: none;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--light-blue);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-item span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 10px 15px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: linear-gradient(transparent, rgba(12, 35, 53, .8));
+}
+
+.video-wrapper {
+    max-width: 850px;
+    margin: 90px auto 0;
+    text-align: center;
+}
+
+.video-heading {
+    margin-bottom: 25px;
+}
+
+.video-heading h3 {
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+    margin: 7px 0;
+}
+
+.video-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.video-wrapper video {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 12px;
+    background: #172f45;
+    box-shadow: var(--shadow);
+}
+
+/* ==============================
+   PENUTUP
+================================= */
+
+.closing-section {
+    padding: 100px 0;
+    background:
+        linear-gradient(rgba(19, 52, 78, .92), rgba(19, 52, 78, .92)),
+        url("assets/banner.jpg") center/cover;
+    color: white;
+    text-align: center;
+}
+
+.closing-content {
+    max-width: 800px;
+}
+
+.closing-content .section-label {
+    color: #b8d2e5;
+}
+
+.closing-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.35;
+    margin: 15px 0 25px;
+}
+
+.closing-content p {
+    color: #d9e5ee;
+    font-size: 14px;
+}
+
+.closing-signature {
+    display: inline-block;
+    margin-top: 35px;
+    color: #d6c29c;
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* ==============================
+   FOOTER
+================================= */
+
+.footer {
+    padding: 55px 0 25px;
+    background: #112d45;
+    color: white;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-brand strong {
+    font-size: 15px;
+}
+
+.footer-brand p {
+    color: #a9c0d1;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.footer-links a {
+    color: #c3d3df;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,.12);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #a9c0d1;
+    font-size: 11px;
+}
+
+/* ==============================
+   MUSIK
+================================= */
+
+.music-button {
+    position: fixed;
+    z-index: 90;
+    right: 25px;
+    bottom: 25px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: var(--navy);
+    box-shadow: var(--shadow);
+    font-size: 13px;
+    transition: .3s;
+}
+
+.music-button:hover {
+    background: var(--blue);
+    transform: translateY(-3px);
+}
+
+.music-button span {
+    margin-left: 6px;
+    font-size: 11px;
+}
+
+/* ==============================
+   MODAL
+================================= */
+
+.modal,
+.image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(10, 29, 44, .75);
+}
+
+.modal.show,
+.image-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: min(550px, 100%);
+    padding: 40px;
+    border-radius: 12px;
+    background: white;
+    animation: introAppear .3s ease;
+}
+
+.modal-content h2 {
+    color: var(--navy);
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.modal-close,
+.image-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    border: none;
+    background: none;
+    color: var(--navy);
+    font-size: 30px;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.image-modal-close {
+    color: white;
+    top: 15px;
+    right: 25px;
+}
+
+/* ==============================
+   ANIMASI
+================================= */
+
+@keyframes introAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 1000px) {
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 10px;
+    }
+
+    .profile-grid {
+        gap: 35px;
+    }
+
+    .org-card img {
+        height: 240px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE HP
+================================= */
+
+@media (max-width: 760px) {
+    .section {
+        padding: 70px 0;
+    }
+
+    .header {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 5%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation a {
+        padding: 12px 5px;
+        font-size: 13px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .navigation .nav-highlight {
+        margin-top: 10px;
+        text-align: center;
+        border: none;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero-content {
+        padding: 90px 0 110px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-bottom {
+        gap: 9px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .hero-line {
+        width: 14px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .profile-image,
+    .profile-image img {
+        min-height: 300px;
+        height: 300px;
+    }
+
+    .profile-text h3 {
+        font-size: 27px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .value-item {
+        padding: 10px 0;
+    }
+
+    .news-tools {
+        flex-direction: column;
+    }
+
+    .news-tools input,
+    .news-tools select {
+        width: 100%;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card img {
+        height: 230px;
+    }
+
+    .announcement-item {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .announcement-detail h3 {
+        font-size: 17px;
+    }
+
+    .three-columns,
+    .two-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .org-card img {
+        height: 210px;
+    }
+
+    .org-card div {
+        padding: 13px 9px;
+    }
+
+    .org-card h4 {
+        font-size: 12px;
+    }
+
+    .department-heading h3 {
+        font-size: 20px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card {
+        padding: 28px;
+    }
+
+    .document-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        height: 180px;
+    }
+
+    .video-wrapper {
+        margin-top: 65px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 430px) {
+    .brand-text strong {
+        font-size: 10px;
+    }
+
+    .brand-text span {
+        font-size: 9px;
+    }
+
+    .three-columns,
+    .two-columns {
+        grid-template-columns: 1fr;
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .org-card img {
+        height: 300px;
+    }
+
+    .gallery-item {
+        height: 145px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .intro-content h1 {
+        font-size: 42px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .music-button {
+        right: 15px;
+        bottom: 15px;
+    }
+}

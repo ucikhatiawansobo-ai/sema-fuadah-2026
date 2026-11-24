@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website resmi Senat Mahasiswa Fuadah 2026. Pusat informasi, berita, pengumuman, program kerja, dan dokumentasi kegiatan.">
+    <meta name="keywords" content="Senat Mahasiswa Fuadah 2026, Senat Mahasiswa, Public Hearing, Sekolah Advokasi">
+    <meta name="author" content="Senat Mahasiswa Fuadah 2026">
+
+    <title>Senat Mahasiswa Fuadah 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PEMBUKA WEBSITE -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <div class="intro-symbol">SM</div>
+            <p class="intro-small">SENAT MAHASISWA FUA DAH</p>
+            <h1>Senat Mahasiswa<br>Fuadah 2026</h1>
+            <p class="intro-description">
+                Ruang untuk menyuarakan gagasan, merawat kebersamaan,
+                dan mengukir perjalanan bersama.
+            </p>
+
+            <button class="enter-button" id="enterButton">
+                Masuk ke Website <span>→</span>
+            </button>
+
+            <p class="intro-note">Sebuah perjalanan, satu cerita, banyak makna.</p>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+
+            <a href="#beranda" class="brand">
+                <div class="brand-logo">SM</div>
+                <div class="brand-text">
+                    <strong>SENAT MAHASISWA</strong>
+                    <span>FUA DAH 2026</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">
+                ☰
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="#beranda">Beranda</a>
+                <a href="#profil">Profil</a>
+                <a href="#berita">Berita</a>
+                <a href="#pengumuman">Pengumuman</a>
+                <a href="#kepengurusan">Kepengurusan</a>
+                <a href="#program">Program Kerja</a>
+                <a href="#arsip">Arsip</a>
+                <a href="#galeri" class="nav-highlight">Dokumentasi</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="beranda">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <span class="eyebrow">WEBSITE RESMI • 2026</span>
+
+                <h1>
+                    Bersama Menjaga<br>
+                    Suara dan Aspirasi
+                </h1>
+
+                <p>
+                    Senat Mahasiswa Fuadah 2026 hadir sebagai ruang
+                    representasi, komunikasi, dan perjuangan aspirasi mahasiswa.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#profil" class="btn btn-primary">Kenali Kami</a>
+                    <a href="#program" class="btn btn-outline">Program Kerja</a>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>ASPIRASI</span>
+                <span class="hero-line"></span>
+                <span>INTEGRITAS</span>
+                <span class="hero-line"></span>
+                <span>KEBERSAMAAN</span>
+            </div>
+        </section>
+
+        <!-- PROFIL -->
+        <section class="section profile-section" id="profil">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">TENTANG KAMI</span>
+                    <h2>Ruang untuk Bertumbuh dan Bersuara</h2>
+                    <p>
+                        Mengenal lebih dekat Senat Mahasiswa Fuadah 2026.
+                    </p>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="profile-image">
+                        <img src="banner.jpg"
+                             alt="Dokumentasi Senat Mahasiswa Fuadah 2026">
+                        <div class="image-caption">
+                            <span>OUR JOURNEY</span>
+                            <strong>Senat Mahasiswa Fuadah 2026</strong>
+                        </div>
+                    </div>
+
+                    <div class="profile-text">
+                        <span class="section-label">SIAPA KAMI?</span>
+                        <h3>Lebih dari Sekadar Organisasi</h3>
+
+                        <p>
+                            Senat Mahasiswa Fuadah 2026 merupakan ruang
+                            representasi mahasiswa yang menjadi wadah
+                            penyampaian aspirasi, pengembangan gagasan,
+                            serta penguatan peran mahasiswa dalam kehidupan
+                            akademik dan kelembagaan.
+                        </p>
+
+                        <p>
+                            Melalui berbagai kegiatan dan program kerja,
+                            kami berupaya membangun komunikasi yang terbuka,
+                            menumbuhkan kesadaran kritis, serta mendorong
+                            terciptanya lingkungan mahasiswa yang partisipatif.
+                        </p>
+
+                        <blockquote>
+                            "Perbedaan bukan alasan untuk menjauh,
+                            melainkan kesempatan untuk saling memahami."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NILAI ORGANISASI -->
+        <section class="values-section">
+            <div class="container values-grid">
+                <div class="value-item">
+                    <span>01</span>
+                    <h3>Representasi</h3>
+                    <p>Menjadi ruang penyampaian suara dan aspirasi mahasiswa.</p>
+                </div>
+
+                <div class="value-item">
+                    <span>02</span>
+                    <h3>Kolaborasi</h3>
+                    <p>Membangun kerja sama melalui komunikasi dan kebersamaan.</p>
+                </div>
+
+                <div class="value-item">
+                    <span>03</span>
+                    <h3>Advokasi</h3>
+                    <p>Mendorong kepedulian dan keberanian dalam menyikapi persoalan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BERITA -->
+        <section class="section news-section" id="berita">
+            <div class="container">
+
+                <div class="section-heading heading-row">
+                    <div>
+                        <span class="section-label">INFORMASI TERKINI</span>
+                        <h2>Berita dan Kegiatan</h2>
+                        <p>Informasi seputar aktivitas Senat Mahasiswa Fuadah 2026.</p>
+                    </div>
+                </div>
+
+                <div class="news-tools">
+                    <input type="search" id="newsSearch"
+                           placeholder="Cari berita atau kegiatan..."
+                           aria-label="Cari berita">
+
+                    <select id="newsFilter" aria-label="Filter berita">
+                        <option value="semua">Semua Kategori</option>
+                        <option value="kegiatan">Kegiatan</option>
+                        <option value="informasi">Informasi</option>
+                        <option value="organisasi">Organisasi</option>
+                    </select>
+                </div>
+
+                <div class="news-grid" id="newsGrid">
+
+                    <article class="news-card">
+    <img src="fotopublichearing.jpeg"
+         alt="Kegiatan Public Hearing Senat Mahasiswa Fuadah 2026">
+
+    <div class="news-content">
+        <span class="news-category">Kegiatan</span>
+
+        <p class="news-date">Senat Mahasiswa Fuadah 2026</p>
+
+        <h3>
+            Public Hearing: Ruang Terbuka untuk Menyampaikan Aspirasi Mahasiswa
+        </h3>
+
+        <p>
+            Senat Mahasiswa Fuadah 2026 menghadirkan ruang dialog terbuka
+            bagi mahasiswa untuk menyampaikan aspirasi, gagasan, kritik,
+            dan saran demi terciptanya lingkungan kampus yang lebih baik.
+        </p>
+
+        <button class="read-more"
+                onclick="openNews(0)">
+            Baca Selengkapnya
+        </button>
+    </div>
+</article>
+
+                    <article class="news-card" data-category="informasi">
+                        <img src="assets/berita-2.jpg" alt="Informasi organisasi">
+                        <div class="news-content">
+                            <span class="news-category">INFORMASI</span>
+                            <h3>Informasi dan Pengembangan Organisasi</h3>
+                            <p>
+                                Berbagai informasi mengenai aktivitas,
+                                perkembangan, dan agenda organisasi.
+                            </p>
+                            <button class="read-more"
+                                data-title="Informasi dan Pengembangan Organisasi"
+                                data-description="Isi bagian ini dengan informasi terbaru mengenai perkembangan dan aktivitas Senat Mahasiswa Fuadah 2026.">
+                                Baca Selengkapnya →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="organisasi">
+                        <img src="assets/berita-3.jpg" alt="Kepengurusan organisasi">
+                        <div class="news-content">
+                            <span class="news-category">ORGANISASI</span>
+                            <h3>Membangun Ruang Aspirasi Mahasiswa</h3>
+                            <p>
+                                Upaya membangun komunikasi dan ruang
+                                partisipasi bagi seluruh mahasiswa.
+                            </p>
+                            <button class="read-more"
+                                data-title="Membangun Ruang Aspirasi Mahasiswa"
+                                data-description="Isi bagian ini dengan berita mengenai upaya organisasi dalam menampung dan mengawal aspirasi mahasiswa.">
+                                Baca Selengkapnya →
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="empty-message" id="emptyMessage">
+                    Berita yang dicari belum ditemukan.
+                </p>
+            </div>
+        </section>
+
+        <!-- PENGUMUMAN -->
+        <section class="section announcement-section" id="pengumuman">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">PUSAT INFORMASI</span>
+                    <h2>Pengumuman</h2>
+                    <p>Informasi penting yang perlu diketahui mahasiswa.</p>
+                </div>
+
+                <div class="announcement-list">
+
+                    <div class="announcement-item">
+                        <div class="announcement-date">
+                            <span>01</span>
+                            <small>INFO</small>
+                        </div>
+                        <div class="announcement-detail">
+                            <span class="announcement-tag">PENGUMUMAN</span>
+                            <h3>Informasi Agenda Kegiatan</h3>
+                            <p>
+                                Informasi mengenai agenda dan jadwal kegiatan
+                                Senat Mahasiswa akan diperbarui melalui halaman ini.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="announcement-item">
+                        <div class="announcement-date">
+                            <span>02</span>
+                            <small>INFO</small>
+                        </div>
+                        <div class="announcement-detail">
+                            <span class="announcement-tag">INFORMASI</span>
+                            <h3>Penyampaian Aspirasi Mahasiswa</h3>
+                            <p>
+                                Mahasiswa dapat menyampaikan aspirasi, kritik,
+                                dan saran melalui ruang komunikasi organisasi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="announcement-item">
+                        <div class="announcement-date">
+                            <span>03</span>
+                            <small>INFO</small>
+                        </div>
+                        <div class="announcement-detail">
+                            <span class="announcement-tag">INFORMASI</span>
+                            <h3>Pembaruan Informasi Organisasi</h3>
+                            <p>
+                                Informasi terbaru mengenai kegiatan dan program
+                                kerja akan disampaikan melalui website ini.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- STRUKTUR ORGANISASI -->
+        <section class="section organization-section" id="kepengurusan">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">DI BALIK PERJALANAN KAMI</span>
+                    <h2>Struktur Kepengurusan</h2>
+                    <p>
+                        13 orang, berbagai peran, dan satu tujuan untuk
+                        menjalankan amanah organisasi.
+                    </p>
+                </div>
+
+                <!-- BADAN MUSYAWARAH -->
+                <div class="org-department">
+                    <div class="department-heading">
+                        <span>01</span>
+                        <h3>Badan Musyawarah</h3>
+                    </div>
+
+                    <div class="org-grid three-columns">
+                        <div class="org-card">
+                            <img src="assets/amiroh.jpg" alt="Amiroh Arifatu L">
+                            <div>
+                                <span>KETUA</span>
+                                <h4>Amiroh Arifatu L</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/suryaman.jpg" alt="Suryaman Juliandika">
+                            <div>
+                                <span>SEKRETARIS</span>
+                                <h4>Suryaman Juliandika</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/naufal.jpg" alt="Naufal Sandy Febrian">
+                            <div>
+                                <span>BENDAHARA</span>
+                                <h4>Naufal Sandy Febrian</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BADAN LEGISLASI -->
+                <div class="org-department">
+                    <div class="department-heading">
+                        <span>02</span>
+                        <h3>Badan Legislasi</h3>
+                    </div>
+
+                    <div class="org-grid three-columns">
+                        <div class="org-card">
+                            <img src="assets/arkhan.jpg" alt="Arkhan">
+                            <div>
+                                <span>KOORDINATOR</span>
+                                <h4>Arkhan</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/siti-masruroh.jpg" alt="Siti Masruroh">
+                            <div>
+                                <span>ANGGOTA</span>
+                                <h4>Siti Masruroh</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/misbah.jpg" alt="Misbah Ulinuha">
+                            <div>
+                                <span>ANGGOTA</span>
+                                <h4>Misbah Ulinuha</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STAFF LEGISLATIF -->
+                <div class="org-department">
+                    <div class="department-heading">
+                        <span>03</span>
+                        <h3>Staff Legislatif</h3>
+                    </div>
+
+                    <div class="org-grid two-columns">
+                        <div class="org-card">
+                            <img src="assets/anggie.jpg" alt="Anggie Ariestyana">
+                            <div>
+                                <span>STAFF</span>
+                                <h4>Anggie Ariestyana</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/karunia.jpg" alt="Karunia Aura Vellynia Julyawaty">
+                            <div>
+                                <span>STAFF</span>
+                                <h4>Karunia Aura Vellynia Julyawaty</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BADAN ANGGARAN -->
+                <div class="org-department">
+                    <div class="department-heading">
+                        <span>04</span>
+                        <h3>Badan Anggaran</h3>
+                    </div>
+
+                    <div class="org-grid three-columns">
+                        <div class="org-card">
+                            <img src="assets/andini.jpg" alt="Andini Saputri">
+                            <div>
+                                <span>KOORDINATOR</span>
+                                <h4>Andini Saputri</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/alya.jpg" alt="Alya Khirania Anatza Putri">
+                            <div>
+                                <span>ANGGOTA</span>
+                                <h4>Alya Khirania Anatza Putri</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/dwi.jpg" alt="Dwi Purwaningsih">
+                            <div>
+                                <span>ANGGOTA</span>
+                                <h4>Dwi Purwaningsih</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STAFF MEDIA -->
+                <div class="org-department">
+                    <div class="department-heading">
+                        <span>05</span>
+                        <h3>Staff Media</h3>
+                    </div>
+
+                    <div class="org-grid two-columns">
+                        <div class="org-card">
+                            <img src="assets/khanza.jpg" alt="Khanza Syaqilla">
+                            <div>
+                                <span>STAFF</span>
+                                <h4>Khanza Syaqilla</h4>
+                            </div>
+                        </div>
+
+                        <div class="org-card">
+                            <img src="assets/ucik.jpg" alt="Ucik Hatiawan Sobo">
+                            <div>
+                                <span>STAFF</span>
+                                <h4>Ucik Hatiawan Sobo</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="org-total">
+                    <strong>13</strong>
+                    <span>Orang dalam satu perjalanan organisasi</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROGRAM KERJA -->
+        <section class="section program-section" id="program">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">AGENDA ORGANISASI</span>
+                    <h2>Program Kerja</h2>
+                    <p>
+                        Dua program kerja sebagai ruang dialog,
+                        pembelajaran, dan penguatan advokasi mahasiswa.
+                    </p>
+                </div>
+
+                <div class="program-grid">
+
+                    <article class="program-card">
+                        <div class="program-number">01</div>
+                        <div class="program-icon">◈</div>
+                        <span>PROGRAM KERJA 01</span>
+                        <h3>Public Hearing</h3>
+
+                        <p>
+                            Public Hearing merupakan forum dialog terbuka
+                            yang menjadi ruang bagi mahasiswa untuk menyampaikan
+                            aspirasi, gagasan, kritik, dan saran terhadap
+                            berbagai persoalan akademik maupun kelembagaan.
+                        </p>
+
+                        <div class="program-focus">
+                            <strong>Fokus kegiatan</strong>
+                            <ul>
+                                <li>Menampung aspirasi mahasiswa.</li>
+                                <li>Membangun komunikasi terbuka.</li>
+                                <li>Mendorong dialog yang konstruktif.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="program-card featured-program">
+                        <div class="program-number">02</div>
+                        <div class="program-icon">✳</div>
+                        <span>PROGRAM KERJA 02</span>
+                        <h3>Sekolah Advokasi</h3>
+
+                        <p>
+                            Sekolah Advokasi merupakan ruang pembelajaran
+                            untuk mengembangkan pengetahuan dan keterampilan
+                            mahasiswa dalam memahami advokasi, mengenali
+                            persoalan, serta merancang langkah strategis.
+                        </p>
+
+                        <div class="program-focus">
+                            <strong>Fokus kegiatan</strong>
+                            <ul>
+                                <li>Meningkatkan kesadaran kritis.</li>
+                                <li>Memahami konsep dan strategi advokasi.</li>
+                                <li>Mengembangkan kemampuan analisis masalah.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BERITA ACARA -->
+        <section class="section minutes-section" id="berita-acara">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">DOKUMEN KEGIATAN</span>
+                    <h2>Berita Acara</h2>
+                    <p>
+                        Dokumentasi tertulis sebagai catatan resmi
+                        pelaksanaan kegiatan dan rapat organisasi.
+                    </p>
+                </div>
+
+                <div class="document-grid">
+                    <div class="document-card">
+                        <div class="document-icon">PDF</div>
+                        <div>
+                            <h3>Berita Acara Rapat</h3>
+                            <p>Dokumentasi hasil rapat organisasi.</p>
+                            <a href="dokumen/berita-acara-rapat.pdf" target="_blank">
+                                Buka Dokumen →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-icon">PDF</div>
+                        <div>
+                            <h3>Berita Acara Kegiatan</h3>
+                            <p>Catatan resmi pelaksanaan kegiatan.</p>
+                            <a href="dokumen/berita-acara-kegiatan.pdf" target="_blank">
+                                Buka Dokumen →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="document-card">
+                        <div class="document-icon">PDF</div>
+                        <div>
+                            <h3>Berita Acara Evaluasi</h3>
+                            <p>Dokumentasi evaluasi kegiatan organisasi.</p>
+                            <a href="dokumen/berita-acara-evaluasi.pdf" target="_blank">
+                                Buka Dokumen →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARSIP -->
+        <section class="section archive-section" id="arsip">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">PUSAT DOKUMENTASI</span>
+                    <h2>Arsip Organisasi</h2>
+                    <p>
+                        Kumpulan dokumen dan administrasi Senat Mahasiswa
+                        Fuadah 2026.
+                    </p>
+                </div>
+
+                <div class="archive-list">
+
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="archive-type">PDF DOCUMENT</span>
+                            <h3>Program Kerja Organisasi</h3>
+                        </div>
+                        <a href="dokumen/program-kerja.pdf" target="_blank">Lihat ↗</a>
+                    </div>
+
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="archive-type">PDF DOCUMENT</span>
+                            <h3>Dokumen Administrasi</h3>
+                        </div>
+                        <a href="dokumen/administrasi.pdf" target="_blank">Lihat ↗</a>
+                    </div>
+
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="archive-type">PDF DOCUMENT</span>
+                            <h3>Laporan Kegiatan</h3>
+                        </div>
+                        <a href="dokumen/laporan-kegiatan.pdf" target="_blank">Lihat ↗</a>
+                    </div>
+
+                    <div class="archive-item">
+                        <div class="archive-info">
+                            <span class="archive-type">PDF DOCUMENT</span>
+                            <h3>Laporan Pertanggungjawaban</h3>
+                        </div>
+                        <a href="dokumen/laporan-pertanggungjawaban.pdf" target="_blank">Lihat ↗</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERI -->
+        <section class="section gallery-section" id="galeri">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">JEJAK PERJALANAN</span>
+                    <h2>Galeri Kenangan</h2>
+                    <p>
+                        Setiap pertemuan memiliki cerita,
+                        setiap perjalanan meninggalkan kenangan.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <button class="gallery-item" data-image="assets/banner.jpg"
+                            aria-label="Lihat foto dokumentasi utama">
+                        <img src="assets/banner.jpg" alt="Dokumentasi bersama">
+                        <span>KEBERSAMAAN</span>
+                    </button>
+
+                    <button class="gallery-item" data-image="assets/berita-1.jpg"
+                            aria-label="Lihat dokumentasi kegiatan pertama">
+                        <img src="assets/berita-1.jpg" alt="Dokumentasi kegiatan">
+                        <span>PERJALANAN</span>
+                    </button>
+
+                    <button class="gallery-item" data-image="assets/berita-2.jpg"
+                            aria-label="Lihat dokumentasi kegiatan kedua">
+                        <img src="assets/berita-2.jpg" alt="Dokumentasi organisasi">
+                        <span>CERITA</span>
+                    </button>
+
+                    <button class="gallery-item" data-image="assets/berita-3.jpg"
+                            aria-label="Lihat dokumentasi kegiatan ketiga">
+                        <img src="assets/berita-3.jpg" alt="Dokumentasi kebersamaan">
+                        <span>KENANGAN</span>
+                    </button>
+                </div>
+
+                <div class="video-wrapper">
+                    <div class="video-heading">
+                        <span class="section-label">VIDEO DOKUMENTASI</span>
+                        <h3>Satu Perjalanan, Banyak Cerita</h3>
+                        <p>
+                            Rekaman momen dan cerita yang menjadi bagian
+                            dari perjalanan Senat Mahasiswa Fuadah 2026.
+                        </p>
+                    </div>
+
+                    <video controls preload="metadata" poster="assets/banner.jpg">
+                        <source src="assets/video-kenangan.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PENUTUP -->
+        <section class="closing-section">
+            <div class="container closing-content">
+                <span class="section-label">SEBUAH CATATAN</span>
+                <h2>
+                    Kita Mungkin Berbeda dalam Pandangan,
+                    tetapi Pernah Berjalan dalam Tujuan yang Sama.
+                </h2>
+
+                <p>
+                    Tidak semua perjalanan berjalan dengan mudah.
+                    Ada perbedaan pendapat, ada perdebatan, ada tawa,
+                    dan ada proses belajar yang tidak selalu terlihat.
+                    Namun, semua itu menjadi bagian dari cerita yang
+                    pernah kita bangun bersama.
+                </p>
+
+                <span class="closing-signature">
+                    Senat Mahasiswa Fuadah 2026
+                </span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+                <div class="brand-logo">SM</div>
+                <div>
+                    <strong>Senat Mahasiswa Fuadah</strong>
+                    <p>Ruang aspirasi, kolaborasi, dan representasi mahasiswa.</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#profil">Profil</a>
+                <a href="#program">Program Kerja</a>
+                <a href="#galeri">Dokumentasi</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Senat Mahasiswa Fuadah. Seluruh hak cipta dilindungi.</p>
+                <a href="#beranda">Kembali ke atas ↑</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- TOMBOL MUSIK -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/lagu-kenangan.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-button" id="musicButton" aria-label="Putar musik">
+        ♫ <span id="musicLabel">Putar Musik</span>
+    </button>
+
+    <!-- MODAL BERITA -->
+    <div class="modal" id="newsModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeNewsModal" aria-label="Tutup">×</button>
+            <span class="section-label">INFORMASI</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- MODAL FOTO -->
+    <div class="image-modal" id="imageModal">
+        <button class="image-modal-close" id="closeImageModal" aria-label="Tutup">×</button>
+        <img id="expandedImage" src="" alt="Foto dokumentasi">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
