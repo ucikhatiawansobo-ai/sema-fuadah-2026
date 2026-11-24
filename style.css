@@ -1487,3 +1487,26 @@ button {
         bottom: 15px;
     }
 }
+.intro-symbol img.logo-intro {
+    width: 75%; /* Atur persentase ini jika logo dirasa kurang besar atau kekecilan */
+    height: 75%;
+    object-fit: contain;
+    border-radius: 50%; /* Opsional: membuat gambar ikut membulat */
+}/* Memperbesar lingkaran luarnya (sesuaikan angkanya jika perlu) */
+.intro-symbol {
+    width: 130px !important;
+    height: 130px !important;
+    padding: 0 !important;
+    overflow: hidden !important; /* Memastikan gambar tidak keluar dari garis lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Memperbesar (zoom) isi gambar agar pas menyentuh garis lingkaran */
+.intro-symbol img.logo-intro {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+    transform: scale(1.65); /* Naikkan angka ini (misal 1.8 atau 2.0) jika masih kurang pas, atau turunkan (misal 1.4) jika terpotong */
+}
