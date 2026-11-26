@@ -1,18 +1,18 @@
-
 // ==============================
 // PEMBUKA WEBSITE
 // ==============================
 
 const introScreen = document.getElementById("introScreen");
 const enterButton = document.getElementById("enterButton");
-const backgroundMusic = document.getElementById("backgroundMusic");
-const musicButton = document.getElementById("musicButton");
-const musicLabel = document.getElementById("musicLabel");
+
+enterButton.addEventListener("click", () => {
+    introScreen.classList.add("hidden");
+});
+
 
 enterButton.addEventListener("click", () => {
     introScreen.classList.add("hidden");
 
-    // Musik mulai setelah pengunjung menekan tombol masuk.
     backgroundMusic.play()
         .then(() => {
             musicLabel.textContent = "Matikan Musik";
@@ -22,7 +22,6 @@ enterButton.addEventListener("click", () => {
             musicLabel.textContent = "Putar Musik";
         });
 });
-
 
 // ==============================
 // TOMBOL MUSIK
@@ -45,7 +44,6 @@ musicButton.addEventListener("click", () => {
     }
 });
 
-
 // ==============================
 // NAVIGASI HP
 // ==============================
@@ -58,6 +56,11 @@ menuToggle.addEventListener("click", () => {
 
     menuToggle.textContent =
         navigation.classList.contains("active") ? "×" : "☰";
+
+    menuToggle.setAttribute(
+        "aria-label",
+        navigation.classList.contains("active") ? "Tutup navigasi" : "Buka navigasi"
+    );
 });
 
 const navLinks = document.querySelectorAll(".navigation a");
@@ -66,9 +69,9 @@ navLinks.forEach(link => {
     link.addEventListener("click", () => {
         navigation.classList.remove("active");
         menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-label", "Buka navigasi");
     });
 });
-
 
 // ==============================
 // PENCARIAN BERITA DAN FILTER
@@ -82,7 +85,6 @@ const emptyMessage = document.getElementById("emptyMessage");
 function filterNews() {
     const keyword = newsSearch.value.toLowerCase().trim();
     const category = newsFilter.value;
-
     let visibleCount = 0;
 
     newsCards.forEach(card => {
@@ -108,7 +110,6 @@ function filterNews() {
 newsSearch.addEventListener("input", filterNews);
 newsFilter.addEventListener("change", filterNews);
 
-
 // ==============================
 // MODAL BERITA
 // ==============================
@@ -126,19 +127,22 @@ readMoreButtons.forEach(button => {
         modalDescription.textContent = button.dataset.description;
 
         newsModal.classList.add("show");
+        document.body.style.overflow = "hidden";
     });
 });
 
-closeNewsModal.addEventListener("click", () => {
+function closeNews() {
     newsModal.classList.remove("show");
-});
+    document.body.style.overflow = "";
+}
+
+closeNewsModal.addEventListener("click", closeNews);
 
 newsModal.addEventListener("click", event => {
     if (event.target === newsModal) {
-        newsModal.classList.remove("show");
+        closeNews();
     }
 });
-
 
 // ==============================
 // GALERI FOTO
@@ -153,21 +157,23 @@ galleryItems.forEach(item => {
     item.addEventListener("click", () => {
         expandedImage.src = item.dataset.image;
         imageModal.classList.add("show");
+        document.body.style.overflow = "hidden";
     });
 });
 
-closeImageModal.addEventListener("click", () => {
+function closeImage() {
     imageModal.classList.remove("show");
     expandedImage.src = "";
-});
+    document.body.style.overflow = "";
+}
+
+closeImageModal.addEventListener("click", closeImage);
 
 imageModal.addEventListener("click", event => {
     if (event.target === imageModal) {
-        imageModal.classList.remove("show");
-        expandedImage.src = "";
+        closeImage();
     }
 });
-
 
 // ==============================
 // TUTUP MODAL DENGAN ESCAPE
@@ -175,12 +181,10 @@ imageModal.addEventListener("click", event => {
 
 document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
-        newsModal.classList.remove("show");
-        imageModal.classList.remove("show");
-        expandedImage.src = "";
+        closeNews();
+        closeImage();
     }
 });
-
 
 // ==============================
 // GAMBAR CADANGAN
